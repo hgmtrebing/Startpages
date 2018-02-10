@@ -10,9 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Libs -->
+<!--
     <script
 			  src="http://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+-->
+    <script
+  		  src="http://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 			  crossorigin="anonymous"></script>
 
     <!--Moment.js, for displaying date and time-->
@@ -23,29 +29,36 @@
     <script src="./assets/common/js/datetime.js"></script>
   </head>
   <body>
-
+    <!--TODO
+      - Quote of the day
+      - Weather
+      - Astronomy
+      - RSS Feeds (News, Markets, Blogs)
+      - Search Widgets
+      - Bookmarks
+      - Personal Greeting
+      - Style Manager
+      - Styling
+    -->
+    <div id="div-weather"></div>
     <div id="div-datetime"></div>
     <div>
-    <!-- search bar is a disaster, thus far -->
     <div id="div-search-bar">
-      <!--This is my first stab at the ever-elusive search bar. I want it to include
-          - DuckDuckGo search
-          - Google Search
-          - YouTube Search
-          - Wikipedia Search
-        -->
-      <form id="form-search-bar" method="get" onaction="https://www.google.com/search?q=Hello+World">
-        <input type="text" id="input-search-bar">
-        <!--
+      <form id="form-search-bar" method="get" action="https://duckduckgo.com">
+        <input type="text" name="q" id="input-search-bar">
         <select id="search-engine-choice">
-          <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
-          <option value="https://www.google.com/search?q=">Google</option>
-          <option value="https://www.youtube.com/results?search_query=">YouTube</option>
-          <option value="Wikipedia">Wikipedia</option>
+          <!--TODO include icons-->
+          <option value="https://duckduckgo.com/" name="q">DuckDuckGo</option>
+          <option value="https://www.google.com/search" name="q">Google</option>
+          <option value="https://www.youtube.com/results" name="search_query">YouTube</option>
+          <option value="https://en.wikipedia.org/w/index.php" name="search">Wikipedia</option>
         </select>
-        -->
-        <input value="Search!" type="submit" formaction = "https://www.google.com/search?q=" formmethod="get">
+        <input value="Search!" type="submit" action="https://www.google.com/search" method="get">
       </form>
+    </div>
+
+    <div id="bookmarks">
+
     </div>
   </body>
 </html>
