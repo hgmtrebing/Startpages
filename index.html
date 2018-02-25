@@ -5,10 +5,14 @@
     <meta name="author" content="Harry Geoffrey Trebing">
     <meta name="description" content="The personalized startpage of Harry Geoffrey Trebing">
     <meta http-equiv="refresh" content="120"> <!-- Supposedly commands the browser to refresh every 120 seconds - works in Firefox-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!--For bootstrap-->
+
     <title>Welcome, Harry!</title> <!-- TODO: Script to dynamically change title, perhaps by time-of-day? -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
 
+      
     <!-- Libs -->
 <!--
     <script
@@ -16,7 +20,7 @@
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			  crossorigin="anonymous"></script>
 -->
-<!--JQuery Unminified-->
+<!--JQuery Unminified -->
     <script
   		  src="http://code.jquery.com/jquery-3.3.1.js"
 			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -38,6 +42,8 @@
     <script src="./assets/common/js/datetime.js"></script>
     <script src="./assets/common/js/weather.js"></script>
     <script src="./assets/common/js/astronomy.js"></script>
+      
+    <link rel="stylesheet" type="text/css" href="assets/common/css/main.css">
   </head>
   <body>
     <!--TODO
@@ -51,26 +57,31 @@
       - Style Manager
       - Styling
     -->
-    <div id="div-weather"></div>
-    <div id="div-astronomy"></div>
-    <div id="div-datetime"></div>
-    <div>
-    <div id="div-search-bar">
-      <form id="form-search-bar" method="get" action="https://duckduckgo.com">
-        <input type="text" name="q" id="input-search-bar">
-        <select id="search-engine-choice">
-          <!--TODO include icons-->
-          <option value="https://duckduckgo.com/" name="q">DuckDuckGo</option>
-          <option value="https://www.google.com/search" name="q">Google</option>
-          <option value="https://www.youtube.com/results" name="search_query">YouTube</option>
-          <option value="https://en.wikipedia.org/w/index.php" name="search">Wikipedia</option>
-        </select>
-        <input value="Search!" type="submit" action="https://www.google.com/search" method="get">
-      </form>
+    <div id="main">
+    <div class="left-scroll-bar" id="news">Test scrolling baby</div>
+    <div id="top-container">
+        <div id="div-weather"></div>
+        <div id="div-astronomy"></div>
     </div>
-
+    <div id="center-container">
+        <div id="div-datetime"></div>
+        <div id="div-search-bar">
+          <form id="form-search-bar" method="get" action="https://duckduckgo.com">
+            <input type="text" name="q" id="input-search-bar">
+            <select id="search-engine-choice">
+              <!--TODO include icons-->
+              <option value="https://duckduckgo.com/" name="q">DuckDuckGo</option>
+              <option value="https://www.google.com/search" name="q">Google</option>
+              <option value="https://www.youtube.com/results" name="search_query">YouTube</option>
+              <option value="https://en.wikipedia.org/w/index.php" name="search">Wikipedia</option>
+            </select>
+            <input value="Search!" type="submit" action="https://www.google.com/search" method="get">
+          </form>
+        </div>
+    </div>
     <div id="bookmarks">
 
+    </div>
     </div>
   </body>
 </html>
