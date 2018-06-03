@@ -10,7 +10,9 @@ $("document").ready(function() {
     var moonIllumination = SunCalc.getMoonIllumination (datetime);
     var moonTimes = SunCalc.getMoonTimes (datetime, lat, long);
     
-    var targetDom = $("#div-astronomy");
+    var targetDom1 = $("#div-astronomy");
+    var targetDom2 = $("#div-solar");
+    var targetDom3 = $("#div-lunar");
     var html = `
 <p>Sunrise: ${ moment(sunTimes.sunrise).format(prefTimeFormat)}</p>
 <p>Sunset: ${ moment(sunTimes.sunset).format(prefTimeFormat)}</p>
@@ -21,5 +23,14 @@ $("document").ready(function() {
 <p>Moon Set: ${ moment(moonTimes.set).format(prefTimeFormat)}</p>
 `;
     
+    var html2 = `
+<p>Morning Astronomical Twilight: ${ moment(sunTimes.nightEnd).format(prefTimeFormat)}</p>
+<p>Morning Nautical Twilight: ${ moment(sunTimes.nauticalDawn).format(prefTimeFormat)} </p>
+<p>Morning Civil Twilight: ${ moment(sunTimes.dawn).format(prefTimeFormat)}</p>
+<p>Sunrise: ${ moment(sunTimes.sunrise).format(prefTimeFormat)}</p>
+<p>Sunrise: </p>
+<p>Solar Noon: </p>
+`;
     targetDom.html(html);
+    targetDom2.html(html2);
 });
