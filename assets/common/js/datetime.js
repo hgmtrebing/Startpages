@@ -7,14 +7,16 @@
  * updateInterval - an Integer describing the number of milliseconds when the date/time should be updated
  */
 
-var dateTimeFormat = "HH:mm:ss [<br>] dddd, MMMM DD, YYYY";
-var target = "#div-datetime";
+var timeFormat = "HH:mm:ss";
+var dateFormat = "dddd, MMMM DD, YYYY";
 var updateInterval = 1000;
 
 $("document").ready(function() {
 
   function displayDateTime () {
-    $(target).html(moment().format(dateTimeFormat));
+      var now = moment();
+      $("#div-date").html(now.format(dateFormat));
+      $("#div-time").html(now.format(timeFormat));
   }
   window.setInterval(displayDateTime, updateInterval);
   

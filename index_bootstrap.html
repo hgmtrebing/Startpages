@@ -38,11 +38,39 @@
         <div class="container" id="div-main">
             
             <div class="jumbotron" id="div-time-date-location">
-                <div id="div-datetime"></div>
+                <div id="div-date"></div>
+                <div id="div-time"></div>
+                <div id="div-location"></div>
             </div>
-        
-        
+            
+            <div id="weather-astronomy-carousel" class="carousel slide" data-ride="carousel">
+                
+                <div class="carousel-inner">
+                    
+                    <!--Slide 1: Weather -->
+                    <div class ="carousel-item active" id="div-weather-slide">
+                        
+                    </div>
+                    
+                    <!--Slide 2: Solar Slide -->
+                    <div class="carousel-item" id="div-solar-slide"></div>
+                    
+                    <!--Slide 3: Lunar Slide -->
+                    <div class="carousel-item" id="div-lunar-slide"></div>
+                </div>
+                
+                <!-- Carousel Indicators for Weather and Astronomy-->
+               <ol class="carousel-indicators">
+                   <li data-target="#weather-astronomy-carousel" data-slide-to="0" class="active"></li> 
+                   <li data-target="#weather-astronomy-carousel" data-slide-to="1"></li> 
+                   <li data-target="#weather-astronomy-carousel" data-slide-to="2"></li> 
+               </ol> 
+              
+                <a class="carousel-control-prev" href="#weather-astronomy-carousel" data-slide="prev"></a>
+                <a class="carousel-control-next" href="#weather-astronomy-carousel" data-slide="next"></a>
+            </div>
         </div>
+        
         <!--
         <div class="container-fluid" id="weather-and-astronomy-container">
             <div class="row">
@@ -75,7 +103,7 @@
                     </div>
                   
                 </div>
-                <div class="col-2" id="div-solar-morning">
+                <div class="col-2" id="div-solar">
                 </div>
                 <div class="col-2" id="div-solar-evening"></div>
                 <div class="col-2" id="div-lunar">
@@ -83,7 +111,6 @@
             </div>
         </div>
         -->
-        
         
         <!-- For Bootstrap -->
         <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
