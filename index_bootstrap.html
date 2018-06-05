@@ -43,13 +43,44 @@
                 <div id="div-location"></div>
             </div>
             
-            <div id="weather-astronomy-carousel" class="carousel slide" data-ride="carousel">
+            <!--data-interval=false used to disable autoslide on carousel... -->
+            <div id="weather-astronomy-carousel" class="carousel slide" data-ride="carousel" data-interval=false>
                 
                 <div class="carousel-inner">
                     
                     <!--Slide 1: Weather -->
                     <div class ="carousel-item active" id="div-weather-slide">
-                        
+                        <div class="container">
+                            <div class="row" id="current-weather-header">
+                                <div class="col">The Weather, Right Now...</div> 
+                            </div> 
+                            
+                            <div class="row">
+                                <div class="col-3" id="temperature-now-label">Temperature:</div> 
+                                <div class="col-3" id="temperature-now"></div>
+                                <div class="col-3" id="pressure-now-label">Pressure:</div>
+                                <div class="col-3" id="pressure-now"></div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-3" id="wind-speed-now-label">Wind Speed:</div> 
+                                <div class="col-3" id="wind-speed-now"></div> 
+                                <div class="col-3" id="wind-chill-now-label">Wind Chill:</div> 
+                                <div class="col-3" id="wind-chill-now"></div> 
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-3" id="humidity-now-label">Humidity:</div> 
+                                <div class="col-3" id="humidity-now"></div> 
+                                <div class="col-3" id="heat-index-now-label">Heat Index:</div> 
+                                <div class="col-3" id="heat-index-now"></div> 
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-3" id="condition-now-label">Condition:</div> 
+                                <div class="col-3" id="condition-now"></div> 
+                            </div>
+                        </div>
                     </div>
                     
                     <!--Slide 2: Solar Slide -->

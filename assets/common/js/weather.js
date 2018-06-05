@@ -11,6 +11,17 @@
          
          $("#current-weather").html("Weather Right Now: "+weather.temp+"&deg "+weather.units.temp +", with winds bearing " + weather.wind.direction+" at "+ weather.wind.speed + " "+ weather.units.speed+". Humidity at "+weather.humidity+"%, pressure at "+weather.pressure+" "+weather.units.pressure);
          
+         $("#temperature-now").html(weather.temp + "&deg" + weather.units.temp);
+         $("#pressure-now").html(Number(weather.pressure).toLocaleString() + " " + weather.units.pressure);
+         
+         $("#wind-speed-now").html(weather.wind.direction + " at " + weather.wind.speed + " " + weather.units.speed);
+         $("#wind-chill-now").html(weather.wind.chill + "&deg" +weather.units.temp);
+         
+         $("#humidity-now").html(weather.humidity + "%");
+         $("#heat-index-now").html(weather.heatindex +"&deg"+weather.units.temp);
+         
+         $("#condition-now").html(weather.text);
+         
          //Forecast Column Headers (Dates)
          $("#date-today").html(weather.forecast[0].day + ", " + weather.forecast[0].date);
          $("#date-tomorrow").html(weather.forecast[1].day + ", " + weather.forecast[1].date);
