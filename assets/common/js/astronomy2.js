@@ -22,38 +22,25 @@ $("document").ready(function() {
         moonPhase = "Waning Crescent";
     }
     
-    var targetDom2 = $("#div-solar");
-    var targetDom3 = $("#div-lunar");
+    $("#nadir").html(moment(sunTimes.nadir).format(prefTimeFormat));
+    $("#solar-noon").html(moment(sunTimes.solarNoon).format(prefTimeFormat));
+    $("#morning-astronomical-twilight").html(moment(sunTimes.nightEnd).format(prefTimeFormat));
+    $("#morning-nautical-twilight").html(moment(sunTimes.nauticalDawn).format(prefTimeFormat));
+    $("#morning-civil-twilight").html(moment(sunTimes.dawn).format(prefTimeFormat));
+    $("#sunrise-start").html(moment(sunTimes.sunrise).format(prefTimeFormat));
+    $("#sunrise-end").html(moment(sunTimes.sunriseEnd).format(prefTimeFormat));
+    $("#sunset-start").html(moment(sunTimes.sunsetStart).format(prefTimeFormat));
+    $("#evening-civil-twilight").html(moment(sunTimes.sunset).format(prefTimeFormat));
+    $("#evening-nautical-twilight").html(moment(sunTimes.dusk).format(prefTimeFormat));
+    $("#evening-astronomical-twilight").html(moment(sunTimes.nauticalDusk).format(prefTimeFormat));
+    $("#night").html(moment(sunTimes.night).format(prefTimeFormat));
     
-    var html2 = `
-        <div class="row" id="solar-header">
-            <div class="col">Solar Morning</div>
-            <div class="col">Solar Evening</div>
-        </div>
-        <div class="row" id="zenith">
-            <div class="col">Nadir: ${ moment(sunTimes.nadir).format(prefTimeFormat)}</div>
-            <div class="col">Solar Noon: ${ moment(sunTimes.solarNoon).format(prefTimeFormat)}</div>
-        </div>
-<p>Morning Astronomical Twilight: ${ moment(sunTimes.nightEnd).format(prefTimeFormat)}</p>
-<p>Morning Nautical Twilight: ${ moment(sunTimes.nauticalDawn).format(prefTimeFormat)} </p>
-<p>Morning Civil Twilight: ${ moment(sunTimes.dawn).format(prefTimeFormat)}</p>
-<p>Sunrise Start: ${ moment(sunTimes.sunrise).format(prefTimeFormat)}</p>
-<p>Sunrise End: ${ moment(sunTimes.sunriseEnd).format(prefTimeFormat)}</p>
-<p>Sunset Start: ${ moment(sunTimes.sunsetStart).format(prefTimeFormat)}</p>
-<p>Evening Civil Twilight: ${ moment(sunTimes.sunset).format(prefTimeFormat)}</p>
-<p>Evening Nautical Twilight: ${ moment(sunTimes.dusk).format(prefTimeFormat)}</p>
-<p>Evening Astronomical Twilight: ${ moment(sunTimes.nauticalDusk).format(prefTimeFormat)}</p>
-<p>Night: ${ moment(sunTimes.night).format(prefTimeFormat)}</p>
-`;
+    $("#moon-illumination").html((Math.round(moonIllumination.fraction *10000)/100) + "%"); 
+    $("#moon-phase").html(moonPhase);
+    $("#moon-rise").html(moment(moonTimes.rise).format(prefDateTimeFormat));
+    $("#moon-set").html(moment(moonTimes.set).format(prefDateTimeFormat));
+    $("#moon-distance").html(Number(Math.round(moonPosition.distance*100)/100).toLocaleString() + " kilometers");
+
+ 
     
-    var html3 = `
-<p>Moon Illumination: ${ (Math.round(moonIllumination.fraction *10000)/100) + "%"}</p> 
-<p>Moon Phase: ${ moonPhase}</p>
-<p>Moon Rise: ${moment(moonTimes.rise).format(prefDateTimeFormat)}</p>
-<p>Moon Set: ${moment(moonTimes.set).format(prefDateTimeFormat)}</p>
-<p>Moon Distance: ${Number(Math.round(moonPosition.distance*100)/100).toLocaleString() + " kilometers"}</p>
-`;
-    
-    targetDom2.html(html2);
-    targetDom3.html(html3);
 });

@@ -15,7 +15,8 @@
          $("#pressure-now").html(Number(weather.pressure).toLocaleString() + " " + weather.units.pressure);
          
          $("#wind-speed-now").html(weather.wind.direction + " at " + weather.wind.speed + " " + weather.units.speed);
-         $("#wind-chill-now").html(weather.wind.chill + "&deg" +weather.units.temp);
+         $("#wind-chill-now").html(Math.floor((weather.wind.chill-32)*(5/9)) + "&deg" +weather.units.temp);
+         //Manual conversion of wind chill to Celsius is necessary - it seems SimpleWeather only outputs windchill in Fahrenheit
          
          $("#humidity-now").html(weather.humidity + "%");
          $("#heat-index-now").html(weather.heatindex +"&deg"+weather.units.temp);

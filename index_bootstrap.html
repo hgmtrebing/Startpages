@@ -33,6 +33,7 @@
         <script src="./assets/common/js/weather.js"></script>
         <script src="./assets/common/js/astronomy2.js"></script>
         
+        <link rel="stylesheet" type="text/css" href="assets/common/css/main_bootstrap.css">
     </head>
     <body>
         <div class="container" id="div-main">
@@ -80,14 +81,112 @@
                                 <div class="col-3" id="condition-now-label">Condition:</div> 
                                 <div class="col-3" id="condition-now"></div> 
                             </div>
+                            
+                            <div class="row" id="forecast-weather-header">
+                                <div class="col">Weather Forecast</div> 
+                            </div>
+                            
+                            <div class="row" id="forecast-date-row">
+                                <div class="col-3"></div> 
+                                <div class="col-3" id="date-today"></div>
+                                <div class="col-3" id="date-tomorrow"></div>
+                                <div class="col-3" id="date-day-after-tomorrow"></div>
+                            </div>
+                            
+                            <div class="row" id="forecast-high-row">
+                                <div class="col-3" id="high-label">High Forecast:</div> 
+                                <div class="col-3" id="high-today"></div> 
+                                <div class="col-3" id="high-tomorrow"></div>
+                                <div class="col-3" id="high-day-after-tomorrow"></div>
+                            </div>
+                            
+                            <div class="row" id="forecast-low-row">
+                                <div class="col-3" id="low-label">Low Forecast:</div> 
+                                <div class="col-3" id="low-today"></div> 
+                                <div class="col-3" id="low-tomorrow"></div>
+                                <div class="col-3" id="low-day-after-tomorrow"></div>
+                            </div>
+                            
+                            <div class="row" id="forecast-condition-row">
+                                <div class="col-3" id="condition-label">Condition Forecast:</div> 
+                                <div class="col-3" id="condition-today"></div> 
+                                <div class="col-3" id="condition-tomorrow"></div>
+                                <div class="col-3" id="condition-day-after-tomorrow"></div>
+                            </div>
                         </div>
                     </div>
                     
                     <!--Slide 2: Solar Slide -->
-                    <div class="carousel-item" id="div-solar-slide"></div>
+                    <div class="carousel-item" id="div-solar-slide">
+                        
+                        <div class="row">
+                            <div class="col-3" id="nadir-label">Nadir:</div>
+                            <div class="col-3" id="nadir"></div>
+                            <div class="col-3" id="solar-noon-label">Solar Noon:</div>
+                            <div class="col-3" id="solar-noon"></div>
+                        </div> 
+                        
+                        <div class="row">
+                            <div class="col-3" id="morning-astronomical-twilight-label">Morning Astronomical Twilight:</div>
+                            <div class="col-3" id="morning-astronomical-twilight"></div>
+                            <div class="col-3" id="sunset-start-label">Sunset Start:</div>
+                            <div class="col-3" id="sunset-start"></div>
+                        </div> 
+                        
+                        <div class="row">
+                            <div class="col-3" id="morning-nautical-twilight-label">Morning Nautical Twilight:</div>
+                            <div class="col-3" id="morning-nautical-twilight"></div>
+                            <div class="col-3" id="evening-civil-twilight-label">Evening Civil Twilight:</div>
+                            <div class="col-3" id="evening-civil-twilight"></div>
+                        </div> 
+                        
+                        <div class="row">
+                            <div class="col-3" id="morning-civil-twilight-label">Morning Civil Twilight:</div>
+                            <div class="col-3" id="morning-civil-twilight"></div>
+                            <div class="col-3" id="evening-nautical-twilight-label">Evening Nautical Twilight:</div>
+                            <div class="col-3" id="evening-nautical-twilight"></div>
+                        </div> 
+                        
+                        <div class="row">
+                            <div class="col-3" id="sunrise-start-label">Sunrise Start:</div>
+                            <div class="col-3" id="sunrise-start"></div>
+                            <div class="col-3" id="evening-astronomical-twilight-label">Evening Astronomical Twilight:</div>
+                            <div class="col-3" id="evening-astronomical-twilight"></div>
+                        </div> 
+                        
+                        <div class="row">
+                            <div class="col-3" id="sunrise-end-label">Day:</div>
+                            <div class="col-3" id="sunrise-end"></div>
+                            <div class="col-3" id="night-label">Night:</div>
+                            <div class="col-3" id="night"></div>
+                        </div> 
+                        
+                    </div>
                     
                     <!--Slide 3: Lunar Slide -->
-                    <div class="carousel-item" id="div-lunar-slide"></div>
+                    <div class="carousel-item" id="div-lunar-slide">
+                    
+                        <div class="row">
+                            <div class="col-3" id="moon-illumination-label">Moon Illumination:</div>
+                            <div class="col-3" id="moon-illumination"></div>
+                            <div class="col-3" id="moon-phase-label">Moon Phase:</div>
+                            <div class="col-3" id="moon-phase"></div>
+                        </div> 
+                        
+                        <div class="row">
+                            <div class="col-3" id="moon-rise-label">Moon Rise:</div>
+                            <div class="col-3" id="moon-rise"></div>
+                            <div class="col-3" id="moon-set-label">Moon Set:</div>
+                            <div class="col-3" id="moon-set"></div>
+                        </div> 
+                        
+                        <div class="row">
+                            <div class="col-3" id="moon-distance-label">Moon Distance:</div>
+                            <div class="col-3" id="moon-distance"></div>
+                        </div> 
+                        
+                    </div>
+                    
                 </div>
                 
                 <!-- Carousel Indicators for Weather and Astronomy-->
@@ -97,51 +196,14 @@
                    <li data-target="#weather-astronomy-carousel" data-slide-to="2"></li> 
                </ol> 
               
-                <a class="carousel-control-prev" href="#weather-astronomy-carousel" data-slide="prev"></a>
-                <a class="carousel-control-next" href="#weather-astronomy-carousel" data-slide="next"></a>
+                <a class="carousel-control-prev" href="#weather-astronomy-carousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span> 
+                </a>
+                <a class="carousel-control-next" href="#weather-astronomy-carousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span> 
+                </a>
             </div>
         </div>
-        
-        <!--
-        <div class="container-fluid" id="weather-and-astronomy-container">
-            <div class="row">
-                <div class="col-6" id="div-weather">
-                    <div class="row" id="current-weather">
-                    </div>
-                    <div class="row" id="forecast-weather-header">
-                        <div class="col" id="date-row-header">Date</div>
-                        <div class="col" id="date-today"></div>
-                        <div class="col" id="date-tomorrow"></div>
-                        <div class="col" id="date-day-after-tomorrow"></div>
-                    </div>
-                    <div class="row" id="forecast-high">
-                        <div class="col" id="high-row-header">High</div>
-                        <div class="col" id="high-today"></div>
-                        <div class="col" id="high-tomorrow"></div>
-                        <div class="col" id="high-day-after-tomorrow"></div>
-                    </div>
-                    <div class="row" id="forecast-low">
-                        <div class="col" id="low-row-header">Low</div>
-                        <div class="col" id="low-today"></div>
-                        <div class="col" id="low-tomorrow"></div>
-                        <div class="col" id="low-day-after-tomorrow"></div>
-                    </div>
-                    <div class="row" id="forecast-condition">
-                        <div class="col" id="condition-row-header">Condition</div>
-                        <div class="col" id="condition-today"></div>
-                        <div class="col" id="condition-tomorrow"></div>
-                        <div class="col" id="condition-day-after-tomorrow"></div>
-                    </div>
-                  
-                </div>
-                <div class="col-2" id="div-solar">
-                </div>
-                <div class="col-2" id="div-solar-evening"></div>
-                <div class="col-2" id="div-lunar">
-                </div>
-            </div>
-        </div>
-        -->
         
         <!-- For Bootstrap -->
         <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
