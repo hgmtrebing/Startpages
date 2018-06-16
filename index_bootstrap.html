@@ -25,7 +25,6 @@
      
         <!-- suncalc.js -->
         <script src="./assets/libs/js/suncalc.js"></script>
-        <script src="./assets/libs/suncalc.js"></script>
         
         <!-- Local Scripts -->
         <script src="./assets/common/js/searchbar.js"></script>
@@ -39,21 +38,21 @@
         <div class="container" id="div-main">
             
             <div class="jumbotron" id="div-time-date-location">
-                <div id="div-date"></div>
-                <div id="div-time"></div>
+                <div class="display-4 text-center" id="div-time"></div>
+                <div class="display-4 text-center" id="div-date"></div>
                 <div id="div-location"></div>
             </div>
             
             <!--data-interval=false used to disable autoslide on carousel... -->
             <div id="weather-astronomy-carousel" class="carousel slide" data-ride="carousel" data-interval=false>
                 
-                <div class="carousel-inner">
+                <div class="carousel-inner" >
                     
                     <!--Slide 1: Weather -->
                     <div class ="carousel-item active" id="div-weather-slide">
                         <div class="container">
-                            <div class="row" id="current-weather-header">
-                                <div class="col">The Weather, Right Now...</div> 
+                            <div class="row header" id="current-weather-header">
+                                <div class="col-12 text-center">The Weather, Right Now...</div> 
                             </div> 
                             
                             <div class="row">
@@ -82,107 +81,120 @@
                                 <div class="col-3" id="condition-now"></div> 
                             </div>
                             
-                            <div class="row" id="forecast-weather-header">
-                                <div class="col">Weather Forecast</div> 
-                            </div>
-                            
-                            <div class="row" id="forecast-date-row">
-                                <div class="col-3"></div> 
-                                <div class="col-3" id="date-today"></div>
-                                <div class="col-3" id="date-tomorrow"></div>
-                                <div class="col-3" id="date-day-after-tomorrow"></div>
-                            </div>
-                            
-                            <div class="row" id="forecast-high-row">
-                                <div class="col-3" id="high-label">High Forecast:</div> 
-                                <div class="col-3" id="high-today"></div> 
-                                <div class="col-3" id="high-tomorrow"></div>
-                                <div class="col-3" id="high-day-after-tomorrow"></div>
-                            </div>
-                            
-                            <div class="row" id="forecast-low-row">
-                                <div class="col-3" id="low-label">Low Forecast:</div> 
-                                <div class="col-3" id="low-today"></div> 
-                                <div class="col-3" id="low-tomorrow"></div>
-                                <div class="col-3" id="low-day-after-tomorrow"></div>
-                            </div>
-                            
-                            <div class="row" id="forecast-condition-row">
-                                <div class="col-3" id="condition-label">Condition Forecast:</div> 
-                                <div class="col-3" id="condition-today"></div> 
-                                <div class="col-3" id="condition-tomorrow"></div>
-                                <div class="col-3" id="condition-day-after-tomorrow"></div>
-                            </div>
                         </div>
                     </div>
                     
-                    <!--Slide 2: Solar Slide -->
+                    <!--Slide 2: Weather Forecast -->
+                    <div class="carousel-item" id="div-weather-forecast-slide">
+                        
+                        <div class="row header" id="forecast-weather-header">
+                            <div class="col-12 text-center">Weather Forecast</div> 
+                        </div>
+                            
+                        <div class="row" id="forecast-date-row">
+                            <div class="col-3"></div> 
+                            <div class="col-3" id="date-today"></div>
+                            <div class="col-3" id="date-tomorrow"></div>
+                            <div class="col-3" id="date-day-after-tomorrow"></div>
+                        </div>
+                            
+                        <div class="row" id="forecast-high-row">
+                            <div class="col-3" id="high-label">High Forecast:</div> 
+                            <div class="col-3" id="high-today"></div> 
+                            <div class="col-3" id="high-tomorrow"></div>
+                            <div class="col-3" id="high-day-after-tomorrow"></div>
+                        </div>
+                            
+                        <div class="row" id="forecast-low-row">
+                            <div class="col-3" id="low-label">Low Forecast:</div> 
+                            <div class="col-3" id="low-today"></div> 
+                            <div class="col-3" id="low-tomorrow"></div>
+                            <div class="col-3" id="low-day-after-tomorrow"></div>
+                        </div>
+                            
+                        <div class="row" id="forecast-condition-row">
+                            <div class="col-3" id="condition-label">Condition Forecast:</div> 
+                            <div class="col-3" id="condition-today"></div> 
+                            <div class="col-3" id="condition-tomorrow"></div>
+                            <div class="col-3" id="condition-day-after-tomorrow"></div>
+                        </div>
+                    </div>
+                    
+                    <!--Slide 3: Solar Slide -->
                     <div class="carousel-item" id="div-solar-slide">
                         
+                        <div class="row header">
+                            <div class="col-12 text-center">Solar Times Today</div> 
+                        </div>
+                        
                         <div class="row">
-                            <div class="col-3" id="nadir-label">Nadir:</div>
-                            <div class="col-3" id="nadir"></div>
-                            <div class="col-3" id="solar-noon-label">Solar Noon:</div>
-                            <div class="col-3" id="solar-noon"></div>
+                            <div class="col-4" id="nadir-label">Nadir:</div>
+                            <div class="col-2" id="nadir"></div>
+                            <div class="col-4" id="solar-noon-label">Solar Noon:</div>
+                            <div class="col-2" id="solar-noon"></div>
                         </div> 
                         
                         <div class="row">
-                            <div class="col-3" id="morning-astronomical-twilight-label">Morning Astronomical Twilight:</div>
-                            <div class="col-3" id="morning-astronomical-twilight"></div>
-                            <div class="col-3" id="sunset-start-label">Sunset Start:</div>
-                            <div class="col-3" id="sunset-start"></div>
+                            <div class="col-4" id="morning-astronomical-twilight-label">Morning Astronomical Twilight:</div>
+                            <div class="col-2" id="morning-astronomical-twilight"></div>
+                            <div class="col-4" id="sunset-start-label">Sunset Start:</div>
+                            <div class="col-2" id="sunset-start"></div>
                         </div> 
                         
                         <div class="row">
-                            <div class="col-3" id="morning-nautical-twilight-label">Morning Nautical Twilight:</div>
-                            <div class="col-3" id="morning-nautical-twilight"></div>
-                            <div class="col-3" id="evening-civil-twilight-label">Evening Civil Twilight:</div>
-                            <div class="col-3" id="evening-civil-twilight"></div>
+                            <div class="col-4" id="morning-nautical-twilight-label">Morning Nautical Twilight:</div>
+                            <div class="col-2" id="morning-nautical-twilight"></div>
+                            <div class="col-4" id="evening-civil-twilight-label">Evening Civil Twilight:</div>
+                            <div class="col-2" id="evening-civil-twilight"></div>
                         </div> 
                         
                         <div class="row">
-                            <div class="col-3" id="morning-civil-twilight-label">Morning Civil Twilight:</div>
-                            <div class="col-3" id="morning-civil-twilight"></div>
-                            <div class="col-3" id="evening-nautical-twilight-label">Evening Nautical Twilight:</div>
-                            <div class="col-3" id="evening-nautical-twilight"></div>
+                            <div class="col-4" id="morning-civil-twilight-label">Morning Civil Twilight:</div>
+                            <div class="col-2" id="morning-civil-twilight"></div>
+                            <div class="col-4" id="evening-nautical-twilight-label">Evening Nautical Twilight:</div>
+                            <div class="col-2" id="evening-nautical-twilight"></div>
                         </div> 
                         
                         <div class="row">
-                            <div class="col-3" id="sunrise-start-label">Sunrise Start:</div>
-                            <div class="col-3" id="sunrise-start"></div>
-                            <div class="col-3" id="evening-astronomical-twilight-label">Evening Astronomical Twilight:</div>
-                            <div class="col-3" id="evening-astronomical-twilight"></div>
+                            <div class="col-4" id="sunrise-start-label">Sunrise Start:</div>
+                            <div class="col-2" id="sunrise-start"></div>
+                            <div class="col-4" id="evening-astronomical-twilight-label">Evening Astronomical Twilight:</div>
+                            <div class="col-2" id="evening-astronomical-twilight"></div>
                         </div> 
                         
                         <div class="row">
-                            <div class="col-3" id="sunrise-end-label">Day:</div>
-                            <div class="col-3" id="sunrise-end"></div>
-                            <div class="col-3" id="night-label">Night:</div>
-                            <div class="col-3" id="night"></div>
+                            <div class="col-4" id="sunrise-end-label">Day:</div>
+                            <div class="col-2" id="sunrise-end"></div>
+                            <div class="col-4" id="night-label">Night:</div>
+                            <div class="col-2" id="night"></div>
                         </div> 
                         
                     </div>
                     
-                    <!--Slide 3: Lunar Slide -->
+                    <!--Slide 4: Lunar Slide -->
                     <div class="carousel-item" id="div-lunar-slide">
                     
+                        <div class="row header">
+                            <div class="col-12 text-center">Lunar Times Today</div> 
+                        </div>
+                        
                         <div class="row">
-                            <div class="col-3" id="moon-illumination-label">Moon Illumination:</div>
-                            <div class="col-3" id="moon-illumination"></div>
+                            <div class="col-2" id="moon-set-label">Moon Set:</div>
+                            <div class="col-4" id="moon-set"></div>
                             <div class="col-3" id="moon-phase-label">Moon Phase:</div>
                             <div class="col-3" id="moon-phase"></div>
                         </div> 
                         
                         <div class="row">
-                            <div class="col-3" id="moon-rise-label">Moon Rise:</div>
-                            <div class="col-3" id="moon-rise"></div>
-                            <div class="col-3" id="moon-set-label">Moon Set:</div>
-                            <div class="col-3" id="moon-set"></div>
+                            <div class="col-2" id="moon-rise-label">Moon Rise:</div>
+                            <div class="col-4" id="moon-rise"></div>
+                            <div class="col-3" id="moon-illumination-label">Moon Illumination:</div>
+                            <div class="col-3" id="moon-illumination"></div>
                         </div> 
                         
                         <div class="row">
-                            <div class="col-3" id="moon-distance-label">Moon Distance:</div>
-                            <div class="col-3" id="moon-distance"></div>
+                            <div class="col-2" id="moon-distance-label">Moon Distance:</div>
+                            <div class="col-4" id="moon-distance"></div>
                         </div> 
                         
                     </div>
@@ -194,6 +206,7 @@
                    <li data-target="#weather-astronomy-carousel" data-slide-to="0" class="active"></li> 
                    <li data-target="#weather-astronomy-carousel" data-slide-to="1"></li> 
                    <li data-target="#weather-astronomy-carousel" data-slide-to="2"></li> 
+                   <li data-target="#weather-astronomy-carousel" data-slide-to="3"></li>
                </ol> 
               
                 <a class="carousel-control-prev" href="#weather-astronomy-carousel" data-slide="prev">
@@ -203,6 +216,20 @@
                     <span class="carousel-control-next-icon"></span> 
                 </a>
             </div>
+            
+            <div class="form-group" id="div-search-bar">
+                <form id="form-search-bar" class="form-inline" method="get" action="https://duckduckgo.com">
+                    <input type="text" class="form-control col-6" name="q" id="input-search-bar">
+                    <select class="form-control col-2" id="search-engine-choice">
+                        <!--TODO include icons-->
+                        <option value="https://duckduckgo.com/" name="q">DuckDuckGo</option>
+                        <option value="https://www.google.com/search" name="q">Google</option>
+                        <option value="https://www.youtube.com/results" name="search_query">YouTube</option>
+                        <option value="https://en.wikipedia.org/w/index.php" name="search">Wikipedia</option>
+                    </select>
+                <input class="col-2" value="Search!" type="submit" action="https://www.google.com/search" method="get">
+              </form>
+        </div>
         </div>
         
         <!-- For Bootstrap -->

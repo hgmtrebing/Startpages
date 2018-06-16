@@ -1,6 +1,6 @@
 $("document").ready(function() {
-    var long = -77.3;
-    var lat = 33.8;
+    var long = -77.3064;
+    var lat = 38.8462;
     var datetime = new Date();
     var prefTimeFormat = "HH:mm:ss"; //for moment.js
     var prefDateTimeFormat = "MMMM Do YYYY, HH:mm:ss";
