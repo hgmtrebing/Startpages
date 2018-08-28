@@ -37,6 +37,28 @@
     <body>
         <div class="container" id="div-main">
             
+            <!--
+                Settings Dropdown
+                    - Font Selection (Size, Color, Font)
+                        - Select Font Type
+                        - Select Font Color
+                        - Slider? for Font Size
+                    - Background Image
+                    - Location Selector
+                    - Slide Control
+                    - Others ....
+            -->
+            <div class="dropdown dropleft text-right" id="settings-popup">
+                <button class="btn dropdown-toggle btn-secondary" type="button" data-toggle="dropdown">
+                    Settings
+                </button>
+                <div class="dropdown-menu">
+                    <button class="dropdown-item">Font</button>
+                    <button class="dropdown-item">Background</button>
+                    <button class="dropdown-item">Location</button>
+                </div>
+            </div>
+            
             <div class="jumbotron" id="div-time-date-location">
                 <div class="display-4 text-center" id="div-time"></div>
                 <div class="display-4 text-center" id="div-date"></div>
@@ -227,9 +249,9 @@
                         <option value="https://www.youtube.com/results" name="search_query">YouTube</option>
                         <option value="https://en.wikipedia.org/w/index.php" name="search">Wikipedia</option>
                     </select>
-                <input class="col-2" value="Search!" type="submit" action="https://www.google.com/search" method="get">
+                    <input class="col-2" value="Search!" type="submit" action="https://www.google.com/search" method="get">
               </form>
-        </div>
+            </div>
         </div>
         
         <!-- For Bootstrap -->

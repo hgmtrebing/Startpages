@@ -49,3 +49,7 @@ body {
 #search-engine-choice {
     margin-right: 10px;
 }
+
+#settings-popup {
+    float: left;
+}
