@@ -50,6 +50,6 @@ body {
     margin-right: 10px;
 }
 
-#settings-popup {
-    float: left;
+.modal {
+    color: black;
 }
